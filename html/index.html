@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Hoja de Vida - Adony Gabriel Perea</title>
+
+  <meta name="description" content="Página personal de Adony Gabriel Perea, estudiante de Tecnología en Desarrollo de Software">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adony Gabriel Perea",
+    "birthDate": "2007-04-30",
+    "jobTitle": "Estudiante de Tecnología en Desarrollo de Software",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Universidad del Valle"
+    }
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    .contenedor {
+      background: white;
+      max-width: 700px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .contenedor {
+      background: #1e1e1e;
+    }
+
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .descripcion {
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+    }
+
+    body.dark-mode .descripcion {
+      background-color: #2a2a2a;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #2563eb;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="contenedor">
+
+    <h1>Bienvenido</h1>
+
+    <p>
+      Aquí encontrarás una breve descripción del autor de esta web
+      y podrás conocer su hoja de vida.
+    </p>
+
+    <img src="img.png" alt="Imagen representativa">
+
+    <button onclick="toggleMode()">Modo claro / oscuro</button>
+
+    <hr>
+
+    <button onclick="toggleDescripcion('desc1')">
+      Ver hoja de vida del autor
+    </button>
+
+    <div id="desc1" class="descripcion">
+      <h3>Perfil Profesional</h3>
+
+      <p>
+        Soy <strong>Adony Gabriel Perea Cuero</strong>, estudiante de Tecnología en Desarrollo de Software en la Universidad del Valle.
+        Desde el inicio de mi formación académica he demostrado un marcado interés por el desarrollo de software y por la manera en que la tecnología puede generar soluciones eficientes e innovadoras.
+      </p>
+
+      <p>
+        Me caracterizo por ser una persona que le gusta trabajar en equipo y poco a poco creciendo con conocimientos amplios ,
+        buscando fortalecer continuamente mis habilidades técnicas y participar en proyectos que aporten valor real.
+      </p>
+
+      <img src="adony.jpeg" alt="Foto del autor" width="210">
+    </div>
+
+    <button onclick="toggleDescripcion('desc2')">
+      Otras habilidades
+    </button>
+
+    <div id="desc2" class="descripcion">
+      <ul>
+        <li><strong>Empatía:</strong> Comprensión y respeto por los demás.</li>
+        <li><strong>Trabajo en equipo:</strong> Colaboración activa y constructiva.</li>
+        <li><strong>Comunicación efectiva:</strong> Expresión clara y profesional.</li>
+        
+      </ul>
+    </div>
+
+    <footer>
+      <p>© 2026 Adony Gabriel Perea</p>
+      <p>Correo: adonygabrielp@gmail.com</p>
+      <p>Tel: 3052574422</p>
+    </footer>
+
+  </div>
+
+  <script>
+    function toggleDescripcion(id) {
+      const desc = document.getElementById(id);
+      desc.style.display =
+        desc.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
